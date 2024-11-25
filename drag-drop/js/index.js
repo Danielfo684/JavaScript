@@ -1,8 +1,8 @@
 import { uiDrag } from "./uiDrag.js";
 import { deckBuilder } from "./deckBuilder.js";
-import { playerDeck } from "./playerDeck.js";
+import { uiTabletop } from "./uiTabletop.js";
 
 
-deckBuilder.builder();
-playerDeck.deckShuffle();
+deckBuilder.spanishDeck();
+deckBuilder.deckShuffle();
 uiDrag.init(".drop-zone", ".card");

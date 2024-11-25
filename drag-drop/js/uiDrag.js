@@ -6,24 +6,7 @@ export const uiDrag = {
             // Ensure each note has a unique ID
             // Draggable
             note.setAttribute('draggable', 'true');
-            switch (note.dataset.suit) {
-                case 'basto':
-                    note.style.backgroundImage = 'url("images/as-bastos.png")';
-                    note.style.backgroundSize = 'cover';
-                    break;
-                case 'copa':
-                    note.style.backgroundImage = 'url("images/copa.jpg")';
-                    note.style.backgroundSize = 'cover';
-                    break;
-                case 'espada':
-                    note.style.backgroundImage = 'url("images/espadas.jpg")';
-                    note.style.backgroundSize = 'cover';
-                    break;
-                case 'oro':
-                    note.style.backgroundImage = 'url("images/oro.jpg")';
-                    note.style.backgroundSize = 'cover';
-                    break;
-            }
+           
 
             //DragStart event
             note.addEventListener('dragstart', (event) => {
@@ -54,12 +37,10 @@ export const uiDrag = {
                 let card = e.dataTransfer.getData('text/plain');
                 let idCard = document.getElementById(card);
                 if (zone.id === idCard.dataset.suit) {
-let extension = zone.getElementsByClassName('card').length;
-console.log(extension + 1);
-console.log(idCard.id);
-console.log(idCard.dataset.value);
-                    if (idCard.dataset.value == (1 + zone.getElementsByClassName('card').length) ) {
-                        
+                    let extension = zone.getElementsByClassName('card').length;
+
+                    if (idCard.dataset.value == (1 + zone.getElementsByClassName('card').length)) {
+
 
                         const draggingNote = document.querySelector('.dragging');
                         //    const x = e.clientX - zone.getBoundingClientRect().left -50;
@@ -77,7 +58,6 @@ console.log(idCard.dataset.value);
                 //   Cambia el color de la nota dependiendo de la zona
 
 
-                zone.style.backgroundColor = '#fff';
             });
         });
 
