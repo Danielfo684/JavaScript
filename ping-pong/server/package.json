@@ -1,0 +1,11 @@
+{
+  "name": "ping-pong",
+  "version": "0.0.1",
+  "description": "my first socket.io app",
+  "type": "module",
+  "dependencies": {
+    "express": "^4.21.1",
+    "node.js": "^0.0.1-security",
+    "socket.io": "^4.8.1"
+  }
+}
