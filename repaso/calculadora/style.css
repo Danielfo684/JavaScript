@@ -1,0 +1,76 @@
+#calculadora {
+    width: 500px;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    font-size: 4rem;
+    margin: auto;
+    justify-content: center;
+    box-shadow: 0 2px 4px black;
+}
+
+.calc-item {
+    box-shadow: 0 2px 4px black;
+    border: 1px solid rgb(165, 165, 165);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.calc-item:hover {
+    cursor: pointer;
+    background-color: ghostwhite;
+}
+
+#calculos {
+    box-shadow: 0 2px 4px black;
+    background-color: beige;
+    width: 500px;
+    font-size: 4rem;
+    height: fit-content;
+    text-align: end;
+    border: 1px solid grey;
+    padding: 0 15px;
+    box-sizing: border-box;
+    min-height: calc(4rem + 15px);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.item-0 {
+    grid-column: 2;
+    grid-row: 4;
+}
+
+#item-c {
+    grid-column: span 2;
+    grid-row: 4;
+}
+#item-suma {
+    grid-column: 4;
+    grid-row: 1;
+}
+#item-resta {
+    grid-column: 4;
+    grid-row: 2;
+}
+#item-igual {
+    grid-column: 4;
+    grid-row: 3;
+}
+
+#historial {
+    width: 400px;
+    height: fit-content;
+    min-height: 400px;
+    border: 1px solid black;
+    font-size: 1.5rem;
+}
+.flex {
+    display: flex;
+    align-items: flex-start;
+gap: 30px;}
